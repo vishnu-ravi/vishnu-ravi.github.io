@@ -50,18 +50,18 @@
 
     function render() {
       requestAnimationFrame(render);
-      
+
       var delta = clock.getDelta();
       group.rotation.x += 3.2 * delta;
       group.rotation.y += 3.2 * delta;
-      
+
       var time = clock.getElapsedTime() * 3;
       group.position.x = Math.cos( time ) * 2;
       group.position.y = Math.sin( time ) * 2 - 0.4;
-      
+
       renderer.render(scene, camera);
     }
-    
+
     render();
 
 
@@ -71,14 +71,14 @@
 
     function applyStep(step) {
       // console.log(step);
-      
+
       if   (step == 2) {
         cube.visible = true;
         pumpkin.visible = false;
       }
       else if   (step == 3) {
-        cube.visible = false;
-        pumpkin.visible = true;
+        cube.visible = true;
+        pumpkin.visible = false;
       }
     }
 
